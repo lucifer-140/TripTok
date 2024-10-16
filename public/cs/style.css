@@ -1,6 +1,6 @@
 /* Global Styles - style.css */
 
-/* Root color variables for easy maintenance */
+/* Root color variables*/
 :root {
     --primary-color: #2B7A63;
     --primary-text-color: #ffffff;
@@ -34,7 +34,7 @@ button, .btn-primary {
 }
 
 button:hover, .btn-primary:hover {
-    background-color: #246351; /* Slightly darker shade of the primary color */
+    background-color: #246351;
 }
 
 /* Form input styling */
@@ -57,7 +57,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     padding-top: 180px; 
 }
 
-/* Spacing between each element */
+/* Spacing between each element(logo conatiner section) */
 .logo, .app-name, .page-title {
     margin-bottom: 19px;
 }
@@ -69,13 +69,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 
-/* Style for the "Got an account?" link */
 .account-link {
-    color: #2B7A63; /* Using a color that matches your theme */
+    color: #2B7A63;
     font-size: 14px;
     text-decoration: none;
 }
 
 .account-link:hover {
-    text-decoration: underline; /* Adds an underline on hover for better UX */
+    text-decoration: underline; 
 }
