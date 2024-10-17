@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - TripTock</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/todo.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/logo.png" alt="Logo" class="logo-img">
+                TripTock
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trips.html">Trips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- To-Do Cards Section -->
+    <div class="container mt-5">
+        <h2 class="section-title">Your To-Do List</h2>
+        <div class="row" id="todoCards">
+            <!-- Cards will be dynamically generated here -->
+        </div>
+
+        <button class="btn btn-success mt-3">Save Trip</button>
+    </div>
+
+    <!-- Add To-Do Modal -->
+    <div class="modal fade" id="addTodoModal" tabindex="-1" aria-labelledby="addTodoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTodoModalLabel">Add To-Do Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="todoForm">
+                        <div class="mb-3">
+                            <label for="todoTitle" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="todoTitle" placeholder="Enter task title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="todoDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="todoDescription" rows="3" placeholder="Enter task description"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="todoTime" class="form-label">Time</label>
+                            <input type="time" class="form-control" id="todoTime">
+                        </div>
+                        <div class="mb-3">
+                            <label for="todoLocation" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="todoLocation" placeholder="Enter location">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="saveTodoBtn">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/todo.js"></script>
+</body>
+</html>

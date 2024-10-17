@@ -1,0 +1,32 @@
+/* Custom styles for borders and visibility */
+.section-border {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.add-icon {
+    font-size: 20px; /* Size of the icon */
+}
+.add-button {
+    width: 36px; /* Circular button width */
+    height: 36px; /* Circular button height */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* To place it properly */
+    right: 0; /* Align to right */
+}
+
+/* Add padding around the main container */
+.container {
+    padding: 20px; /* Adjust as necessary for more or less padding */
+}
+
+/* Style for the logo */
+.logo {
+    display: block;
+    margin: 0 auto 20px; /* Center the logo with margin below */
+    max-width: 200px; /* Adjust max width for the logo */
+}

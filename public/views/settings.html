@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account - TripTock</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            width: 100px; /* Adjusted logo size */
+            margin-bottom: 20px; /* Space below the logo */
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn {
+            margin-top: 10px; /* Space between buttons */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <img src="../assets/logo.png" alt="TripTock Logo" class="logo"> <!-- Smaller logo -->
+        <h2>Account Information</h2>
+
+        <form id="accountForm">
+            <div class="mb-3">
+                <label for="profilePicture" class="form-label">Profile Picture</label>
+                <input type="file" class="form-control" id="profilePicture" accept="image/*">
+            </div>
+
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            </div>
+
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+            </div>
+
+            <button type="submit" class="btn btn-success">Update Account</button>
+            <button type="button" class="btn btn-secondary">Cancel</button>
+        </form>
+    </div>
+
+    <script src="../js/account.js"></script>
+</body>
+</html>
