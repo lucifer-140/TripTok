@@ -1,0 +1,31 @@
+<!-- flightModal.html -->
+<div class="modal fade" id="flightModal" tabindex="-1" aria-labelledby="flightModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="flightModalLabel">Add Flight</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="flightForm">
+                    <div class="mb-3">
+                        <label for="flightNumber" class="form-label">Flight Number</label>
+                        <input type="text" class="form-control" id="flightNumber" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="seats" class="form-label">Seats</label>
+                        <input type="number" class="form-control" id="seats" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="flightDocument" class="form-label">Documents</label>
+                        <input type="file" class="form-control" id="flightDocument">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveFlight">Save Flight</button>
+            </div>
+        </div>
+    </div>
+</div>

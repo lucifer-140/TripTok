@@ -1,0 +1,35 @@
+<!-- accommodationModal.html -->
+<div class="modal fade" id="accommodationModal" tabindex="-1" aria-labelledby="accommodationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="accommodationModalLabel">Add Accommodation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="accommodationForm">
+                    <div class="mb-3">
+                        <label for="accommodationName" class="form-label">Accommodation Name</label>
+                        <input type="text" class="form-control" id="accommodationName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="checkIn" class="form-label">Check-in Date</label>
+                        <input type="date" class="form-control" id="checkIn" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="checkOut" class="form-label">Check-out Date</label>
+                        <input type="date" class="form-control" id="checkOut" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="accommodationDocument" class="form-label">Documents</label>
+                        <input type="file" class="form-control" id="accommodationDocument">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveAccommodation">Save Accommodation</button>
+            </div>
+        </div>
+    </div>
+</div>

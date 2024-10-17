@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - TripTock</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css"> <!-- Profile specific CSS -->
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/logo.png" alt="Logo" class="logo-img"> TripTock
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trips.html">Trips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="container mt-4">
+        <div class="profile-card">
+            <img src="../assets/blankprofilepic.jpeg" alt="Profile Image" class="profile-img">
+            <h3 id="username">John Doe</h3>
+            <p id="email">Email: johndoe@example.com</p>
+            <button class="btn btn-primary btn-small" onclick="window.location.href='settings.html'">Edit Profile</button>
+        </div>
+
+        <!-- Trip History Section -->
+        <div class="trip-history-card mt-4">
+            <h5>Trip History</h5>
+            <ul class="list-group">
+                <li class="list-group-item">Paris Trip - Jan 2024</li>
+                <li class="list-group-item">Tokyo Adventure - Dec 2023</li>
+                <li class="list-group-item">New York Getaway - Nov 2023</li>
+            </ul>
+        </div>
+
+        <!-- Favorite Destinations Section -->
+        <div class="favorites-card mt-4">
+            <h5>Favorite Destinations</h5>
+            <ul class="list-group" id="favoriteDestinationsList">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Paris, France
+                    <button class="btn btn-danger btn-small">Remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Tokyo, Japan
+                    <button class="btn btn-danger btn-small">Remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    New York, USA
+                    <button class="btn btn-danger btn-small">Remove</button>
+                </li>
+            </ul>
+            <button class="btn btn-secondary btn-small mt-3" data-bs-toggle="modal" data-bs-target="#addDestinationModal">Add Destination</button>
+        </div>
+    </div>
+
+    <!-- Add Destination Modal -->
+    <div class="modal fade" id="addDestinationModal" tabindex="-1" aria-labelledby="addDestinationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addDestinationModalLabel">Add Favorite Destination</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="destinationName" class="form-label">Destination Name</label>
+                            <input type="text" class="form-control" id="destinationName" placeholder="Enter destination name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-small" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary btn-small" id="addDestinationButton">Add Destination</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>

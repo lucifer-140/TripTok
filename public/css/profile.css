@@ -1,0 +1,40 @@
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.logo-img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #f0f0f0; /* Light border */
+}
+
+.trip-history-card,
+.favorites-card {
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 14px;
+}

@@ -1,0 +1,22 @@
+body {
+    padding: 20px;
+    text-align: center; /* Center align text and content */
+}
+.logo {
+    width: 100px; /* Adjusted logo size */
+    margin-bottom: 20px; /* Space below the logo */
+}
+.card {
+    margin-bottom: 15px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.card-img-top {
+    border-radius: 10px 10px 0 0; /* Rounded corners for the image */
+}
+.btn {
+    padding: 5px 10px; /* Smaller button */
+}
+.save-trip-btn {
+    margin-top: 20px;
+}
