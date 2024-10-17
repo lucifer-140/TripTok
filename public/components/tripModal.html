@@ -1,0 +1,35 @@
+<!-- Modal Structure -->
+<div class="modal fade" id="tripModal" tabindex="-1" aria-labelledby="tripModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tripModalLabel">Create a New Trip</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="tripTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="tripTitle" placeholder="Enter trip title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tripDestination" class="form-label">Destination</label>
+                        <input type="text" class="form-control" id="tripDestination" placeholder="Enter destination" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tripStartDate" class="form-label">Start Date</label>
+                        <input type="date" class="form-control" id="tripStartDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tripEndDate" class="form-label">End Date</label>
+                        <input type="date" class="form-control" id="tripEndDate" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Next / Create Trip</button>
+            </div>
+        </div>
+    </div>
+</div>

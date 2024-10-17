@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips - TripTock</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/logo.png" alt="Logo" class="logo-img">
+                TripTock
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trips.html">Trips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Trips Section -->
+    <div class="container mt-5">
+        <h2 class="section-title">Upcoming Trips</h2>
+        <div id="upcomingTrips" class="trip-list">
+            <!-- Trip cards will be dynamically loaded here -->
+        </div>
+        <div id="noUpcomingTrips" class="alert alert-info d-none" role="alert">
+            No upcoming trips. Plan your next adventure!
+        </div>
+
+        <h2 class="section-title mt-5">Finished Trips</h2>
+        <div id="finishedTrips" class="trip-list">
+            <!-- Finished trip cards will be dynamically loaded here -->
+        </div>
+        <div id="noFinishedTrips" class="alert alert-info d-none" role="alert">
+            No finished trips. You haven't completed any trips yet!
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/trips.js"></script>
+</body>
+</html>
