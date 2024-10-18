@@ -1,4 +1,3 @@
-<!-- currencyModal.html -->
 <div class="modal fade" id="currencyModal" tabindex="-1" aria-labelledby="currencyModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -15,6 +14,10 @@
                     <div class="mb-3">
                         <label for="destinationCountry" class="form-label">Destination Country</label>
                         <input type="text" class="form-control" id="destinationCountryCurrency" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exchangeRate" class="form-label">Exchange Rate (1 Your Currency = ? Destination Currency)</label>
+                        <input type="number" step="0.01" class="form-control" id="exchangeRate" required>
                     </div>
                 </form>
             </div>

@@ -13,6 +13,7 @@
         <img src="../assets/logo.png" alt="TripTock Logo" class="logo">
         <h2>Additional Travel Information</h2>
 
+        <!-- Flights Section -->
         <div class="section-border">
             <h3>Flights</h3>
             <div id="flightsSection">
@@ -24,6 +25,7 @@
                             <th>Departure Time</th>
                             <th>Arrival Time</th>
                             <th>Budget</th>
+                            <th>Document (PDF, JPG)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +38,7 @@
             </div>
         </div>
 
+        <!-- Accommodations Section -->
         <div class="section-border">
             <h3>Accommodations</h3>
             <div id="accommodationSection">
@@ -46,6 +49,7 @@
                             <th>Check-in</th>
                             <th>Check-out</th>
                             <th>Budget</th>
+                            <th>Document (PDF, JPG)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -58,6 +62,7 @@
             </div>
         </div>
 
+        <!-- Transport Section -->
         <div class="section-border">
             <h3>Transport</h3>
             <div id="transportSection">
@@ -67,6 +72,7 @@
                             <th>Transport Type</th>
                             <th>Date</th>
                             <th>Budget</th>
+                            <th>Document (PDF, JPG)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,6 +85,7 @@
             </div>
         </div>
 
+        <!-- Travel Insurance Details Section -->
         <div class="section-border">
             <h3>Travel Insurance Details</h3>
             <div id="insuranceSection">
@@ -88,6 +95,7 @@
                             <th>Insurance Provider</th>
                             <th>Insurance Type</th>
                             <th>Policy Number</th>
+                            <th>Document (PDF, JPG)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -100,6 +108,7 @@
             </div>
         </div>
 
+        <!-- Emergency Contacts Section -->
         <div class="section-border">
             <h3>Emergency Contacts</h3>
             <div id="emergencyContactSection">
@@ -121,6 +130,7 @@
             </div>
         </div>
 
+        <!-- Visa Information Section -->
         <div class="section-border">
             <h3>Visa Information</h3>
             <div id="visaSection">
@@ -128,7 +138,9 @@
                     <thead>
                         <tr>
                             <th>Visa Details</th>
-                            <th>Budget</th>
+                            <th>Issue Date</th>
+                            <th>Expiration Date</th>
+                            <th>Document (PDF, JPG)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -141,6 +153,7 @@
             </div>
         </div>
 
+        <!-- Currency Exchange Section -->
         <div class="section-border">
             <h3>Currency Exchange</h3>
             <div id="currencySection">
@@ -149,6 +162,7 @@
                         <tr>
                             <th>Your Country</th>
                             <th>Destination Country</th>
+                            <th>Exchange Rate</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -161,10 +175,10 @@
             </div>
         </div>
 
-        <!-- Total Budget Section -->
+        <!-- Notes -->
         <div class="section-border">
-            <h3>Total Budget</h3>
-            <textarea class="form-control" id="totalBudget" rows="2" placeholder="Enter total budget for the trip"></textarea>
+            <h3>Notes</h3>
+            <textarea class="form-control" id="tripNotes" rows="5" placeholder="Write your Goals here."></textarea>
         </div>
 
         <!-- Submit and Cancel Buttons -->
@@ -191,6 +205,7 @@
         <script src="../js/currency.js"></script>
         <script src="../js/insurance.js"></script>
         <script src="../js/emergencyContacts.js"></script>
+        <script src="../js/navigation.js"></script>
 
         <!-- Fetch modal components -->
         <script>

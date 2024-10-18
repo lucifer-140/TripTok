@@ -19,8 +19,15 @@
                         <label for="policyNumber" class="form-label">Policy Number</label>
                         <input type="text" class="form-control" id="policyNumber" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Add Insurance</button>
+                    <div class="mb-3">
+                        <label for="insuranceDocuments" class="form-label">Documents</label>
+                        <input type="file" class="form-control" id="insuranceDocuments" multiple>
+                    </div>
                 </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveInsurance">Add Insurance</button>
             </div>
         </div>
     </div>
