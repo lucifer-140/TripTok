@@ -1,4 +1,3 @@
-<!-- visaModal.html -->
 <div class="modal fade" id="visaModal" tabindex="-1" aria-labelledby="visaModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -9,14 +8,22 @@
             <div class="modal-body">
                 <form id="visaForm">
                     <div class="mb-3">
-                        <label for="visaDetails" class="form-label">Visa Details</label>
+                        <label for="visaDetails" class="form-label">Details</label>
                         <input type="text" class="form-control" id="visaDetails" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="issueDate" class="form-label">Issue Date</label>
+                        <input type="date" class="form-control" id="issueDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="expirationDate" class="form-label">Expiration Date</label>
+                        <input type="date" class="form-control" id="expirationDate" required>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="saveVisa">Save Visa</button>
+                <button type="button" class="btn btn-primary" id="visaModalSubmit">Add Visa</button>
             </div>
         </div>
     </div>

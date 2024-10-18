@@ -1,28 +1,27 @@
-// flights.js
 document.getElementById('addFlight').addEventListener('click', function() {
-    // Show the modal
-    var flightModal = new bootstrap.Modal(document.getElementById('flightModal'));
+    const flightModal = new bootstrap.Modal(document.getElementById('flightModal'));
     flightModal.show();
 });
 
 document.getElementById('saveFlight').addEventListener('click', function() {
     const flightNumber = document.getElementById('flightNumber').value;
     const seats = document.getElementById('seats').value;
-    const documentInput = document.getElementById('flightDocument');
+    const flightDocuments = document.getElementById('flightDocuments').files;
+    const flightDate = document.getElementById('flightDate').value;
+    const flightBudget = document.getElementById('flightBudget').value;
 
-    if (flightNumber && seats) {
-        const newRow = `<tr>
-            <td>${flightNumber}</td>
-            <td>${seats}</td>
-            <td>${documentInput.files[0] ? documentInput.files[0].name : 'No file uploaded'}</td>
-        </tr>`;
-        document.querySelector('#addedFlightsTable tbody').insertAdjacentHTML('beforeend', newRow);
-        
-        // Reset input fields
-        document.getElementById('flightForm').reset();
+    const flightsTableBody = document.getElementById('flightsTable').getElementsByTagName('tbody')[0];
+    const newRow = flightsTableBody.insertRow();
 
-        // Close the modal
-        var flightModal = bootstrap.Modal.getInstance(document.getElementById('flightModal'));
-        flightModal.hide();
-    }
+    newRow.innerHTML = `
+        <td>${flightNumber}</td>
+        <td>${seats}</td>
+        <td>${Array.from(flightDocuments).map(file => file.name).join(', ')}</td>
+        <td>${flightDate}</td>
+        <td>${flightBudget}</td>
+    `;
+
+    document.getElementById('flightForm').reset();
+    const flightModal = bootstrap.Modal.getInstance(document.getElementById('flightModal'));
+    flightModal.hide();
 });
