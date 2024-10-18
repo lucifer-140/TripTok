@@ -2,14 +2,18 @@
 
 // Sample data for upcoming and finished trips
 const upcomingTrips = [
-    // {
-    //     title: "New York Adventure",
-    //     start: "Dec 15, 2024",
-    //     end: "Dec 25, 2024"
-    // }
+    {
+        title: "New York Adventure",
+        start: "Dec 15, 2024",
+        end: "Dec 25, 2024"
+    }
 ]; // This should be replaced with data from your database
 const finishedTrips = [
-    
+    {
+        title: "New York Adventure",
+        start: "Dec 15, 2024",
+        end: "Dec 25, 2024"
+    }
 ]; // This should also be replaced with data from your database
 
 // Function to render upcoming trips

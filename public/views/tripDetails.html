@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Details - TripTock</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/trip-details.css"> <!-- Trip details specific CSS -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/logo.png" alt="Logo" class="logo-img"> TripTock
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trips.html">Trips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Trip Details Section -->
+    <div class="container mt-4">
+        <div class="trip-overview-card">
+            <h2>Trip to Paris</h2>
+            <p><strong>Dates:</strong> Jan 10 - Jan 20, 2024</p>
+            <p><strong>Total Budget:</strong> $1500</p>
+            <p><strong>Participants:</strong> John, Alice, Bob</p>
+        </div>
+
+        <!-- Days Section -->
+        <div class="days-section mt-4">
+            <h4>Itinerary</h4>
+            <div class="list-group" id="daysList"></div>
+        </div>
+
+        <!-- Files/Attachments Section -->
+        <div class="files-card mt-4">
+            <h4>Files & Documents</h4>
+            <ul class="list-group">
+                <li class="list-group-item">Flight Ticket - <a href="#">View</a></li>
+                <li class="list-group-item">Hotel Booking - <a href="#">View</a></li>
+            </ul>
+        </div>
+
+        <!-- Accommodation Section -->
+        <div class="accommodation-card mt-4">
+            <h4>Accommodation</h4>
+            <div class="row" id="hotelList"></div> <!-- Cards will be dynamically generated here -->
+        </div>
+
+        <!-- Transport Section -->
+        <div class="transport-card mt-4">
+            <h4>Transport</h4>
+            <div class="row" id="transportList"></div> <!-- Cards will be dynamically generated here -->
+        </div>
+
+        <div class="edit-trip-section mt-4">
+            <button class="btn btn-primary" onclick="window.location.href='edit-trip.html'">Edit Trip Details</button>
+        </div>
+    </div>
+
+    <!-- Load Modal Component -->
+    <div id="modalContainer"></div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/tripDetails.js"></script> <!-- Include the new JavaScript file -->
+</body>
+</html>

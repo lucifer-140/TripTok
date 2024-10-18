@@ -6,13 +6,11 @@
     <title>Additional Travel Information - TripTock</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/additionalInfo.css"> <!-- Link to the new CSS file -->
+    <link rel="stylesheet" href="../css/tripInformation.css">
 </head>
 <body>
     <div class="container mt-5">
-        <!-- Logo at the top -->
-        <img src="../assets/logo.png" alt="TripTock Logo" class="logo"> <!-- Ensure the path is correct for your logo -->
-
+        <img src="../assets/logo.png" alt="TripTock Logo" class="logo">
         <h2>Additional Travel Information</h2>
 
         <div class="section-border">
@@ -23,8 +21,9 @@
                         <tr>
                             <th>Flight Number</th>
                             <th>Seats</th>
-                            <th>Documents</th>
-                            <th>Actions</th>
+                            <th>Departure Time</th>
+                            <th>Arrival Time</th>
+                            <th>Budget</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,7 +45,7 @@
                             <th>Accommodation Name</th>
                             <th>Check-in</th>
                             <th>Check-out</th>
-                            <th>Documents</th>
+                            <th>Budget</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,12 +59,76 @@
         </div>
 
         <div class="section-border">
+            <h3>Transport</h3>
+            <div id="transportSection">
+                <table class="table" id="transportTable">
+                    <thead>
+                        <tr>
+                            <th>Transport Type</th>
+                            <th>Date</th>
+                            <th>Budget</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Added transport will be displayed here -->
+                    </tbody>
+                </table>
+                <button type="button" id="addTransport" class="btn btn-primary add-button">
+                    <span class="add-icon">+</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="section-border">
+            <h3>Travel Insurance Details</h3>
+            <div id="insuranceSection">
+                <table class="table" id="insuranceTable">
+                    <thead>
+                        <tr>
+                            <th>Insurance Provider</th>
+                            <th>Insurance Type</th>
+                            <th>Policy Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Added insurance information will be displayed here -->
+                    </tbody>
+                </table>
+                <button type="button" id="addInsurance" class="btn btn-primary add-button">
+                    <span class="add-icon">+</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="section-border">
+            <h3>Emergency Contacts</h3>
+            <div id="emergencyContactSection">
+                <table class="table" id="emergencyContactTable">
+                    <thead>
+                        <tr>
+                            <th>Contact Name</th>
+                            <th>Phone Number</th>
+                            <th>Relationship</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Added emergency contacts will be displayed here -->
+                    </tbody>
+                </table>
+                <button type="button" id="addEmergencyContact" class="btn btn-primary add-button">
+                    <span class="add-icon">+</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="section-border">
             <h3>Visa Information</h3>
             <div id="visaSection">
                 <table class="table" id="visaTable">
                     <thead>
                         <tr>
                             <th>Visa Details</th>
+                            <th>Budget</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -98,23 +161,10 @@
             </div>
         </div>
 
+        <!-- Total Budget Section -->
         <div class="section-border">
-            <h3>Notes</h3>
-            <div id="notesSection">
-                <table class="table" id="notesTable">
-                    <thead>
-                        <tr>
-                            <th>Overall Goals/Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Added notes will be displayed here -->
-                    </tbody>
-                </table>
-                <button type="button" id="addNotes" class="btn btn-primary add-button">
-                    <span class="add-icon">+</span>
-                </button>
-            </div>
+            <h3>Total Budget</h3>
+            <textarea class="form-control" id="totalBudget" rows="2" placeholder="Enter total budget for the trip"></textarea>
         </div>
 
         <!-- Submit and Cancel Buttons -->
@@ -126,17 +176,21 @@
         <!-- Include the modal components -->
         <div id="flightModalContainer"></div>
         <div id="accommodationModalContainer"></div>
+        <div id="transportModalContainer"></div>
         <div id="visaModalContainer"></div>
         <div id="currencyModalContainer"></div>
-        <div id="notesModalContainer"></div>
+        <div id="insuranceModalContainer"></div>
+        <div id="emergencyContactModalContainer"></div>
 
         <!-- Include JavaScript files -->
         <script src="../js/bootstrap.bundle.min.js"></script>
         <script src="../js/flights.js"></script>
         <script src="../js/accommodations.js"></script>
+        <script src="../js/transport.js"></script>
         <script src="../js/visa.js"></script>
         <script src="../js/currency.js"></script>
-        <script src="../js/notes.js"></script>
+        <script src="../js/insurance.js"></script>
+        <script src="../js/emergencyContacts.js"></script>
 
         <!-- Fetch modal components -->
         <script>
@@ -152,6 +206,12 @@
                     document.getElementById('accommodationModalContainer').innerHTML = data;
                 });
 
+            fetch('../components/transportModal.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('transportModalContainer').innerHTML = data;
+                });
+
             fetch('../components/visaModal.html')
                 .then(response => response.text())
                 .then(data => {
@@ -164,10 +224,16 @@
                     document.getElementById('currencyModalContainer').innerHTML = data;
                 });
 
-            fetch('../components/notesModal.html')
+            fetch('../components/insuranceModal.html')
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById('notesModalContainer').innerHTML = data;
+                    document.getElementById('insuranceModalContainer').innerHTML = data;
+                });
+
+            fetch('../components/emergencyContactModal.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('emergencyContactModalContainer').innerHTML = data;
                 });
         </script>
     </div>
