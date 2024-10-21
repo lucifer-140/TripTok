@@ -21,3 +21,5 @@ document.getElementById('addEmergencyContact').addEventListener('click', functio
 //     const emergencyContactModal = bootstrap.Modal.getInstance(document.getElementById('emergencyContactModal'));
 //     emergencyContactModal.hide();
 // });
+
+// 

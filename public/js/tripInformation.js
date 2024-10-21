@@ -57,12 +57,23 @@ function setupAccommodationModal() {
             documentCell.innerText = 'No Documents';
         }
 
+        // Create the delete button
+        const deleteCell = newRow.insertCell(5); // New cell for delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.innerText = 'Delete';
+        deleteButton.classList.add('btn', 'btn-danger'); // Optional: Bootstrap classes for styling
+        deleteButton.addEventListener('click', () => {
+            accommodationsTable.deleteRow(newRow.rowIndex - 1); // Remove the row from the table
+        });
+        deleteCell.appendChild(deleteButton); // Add button to the cell
+
         // Reset the form after saving the accommodation details
         document.getElementById('accommodationForm').reset();
         const accommodationModal = bootstrap.Modal.getInstance(document.getElementById('accommodationModal'));
         accommodationModal.hide();
     });
 }
+
 
 // Function to handle adding transport data to the table
 function setupTransportModal() {
@@ -96,12 +107,23 @@ function setupTransportModal() {
             documentCell.innerText = 'No Documents';
         }
 
+        // Create the delete button
+        const deleteCell = newRow.insertCell(4); // New cell for delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.innerText = 'Delete';
+        deleteButton.classList.add('btn', 'btn-danger'); // Optional: Bootstrap classes for styling
+        deleteButton.addEventListener('click', () => {
+            transportTable.deleteRow(newRow.rowIndex - 1); // Remove the row from the table
+        });
+        deleteCell.appendChild(deleteButton); // Add button to the cell
+
         // Reset the form after saving the transport details
         document.getElementById('transportForm').reset();
         const transportModal = bootstrap.Modal.getInstance(document.getElementById('transportModal'));
         transportModal.hide();
     });
 }
+
 
 // Function to handle adding emergency contact data to the table
 function setupEmergencyContactModal() {
@@ -124,6 +146,16 @@ function setupEmergencyContactModal() {
             newRow.insertCell(1).innerText = phone;
             newRow.insertCell(2).innerText = relationship;
 
+            // Create the delete button
+            const deleteCell = newRow.insertCell(3); // New cell for delete button
+            const deleteButton = document.createElement('button');
+            deleteButton.innerText = 'Delete';
+            deleteButton.classList.add('btn', 'btn-danger'); // Optional: Bootstrap classes for styling
+            deleteButton.addEventListener('click', () => {
+                tableBody.deleteRow(newRow.rowIndex - 1); // Remove the row from the table
+            });
+            deleteCell.appendChild(deleteButton); // Add button to the cell
+
             // Reset the form
             emergencyContactForm.reset();
 
@@ -135,6 +167,7 @@ function setupEmergencyContactModal() {
         }
     });
 }
+
 
 // Function to handle adding flight data to the table
 function setupFlightModal() {
@@ -172,12 +205,23 @@ function setupFlightModal() {
             documentCell.innerText = 'No Documents';
         }
 
+        // Create the delete button
+        const deleteCell = newRow.insertCell(6); // New cell for delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.innerText = 'Delete';
+        deleteButton.classList.add('btn', 'btn-danger'); // Optional: Bootstrap classes for styling
+        deleteButton.addEventListener('click', () => {
+            flightsTable.deleteRow(newRow.rowIndex - 1); // Remove the row from the table
+        });
+        deleteCell.appendChild(deleteButton); // Add button to the cell
+
         // Reset the form after saving the flight details
         document.getElementById('flightForm').reset();
         const flightModal = bootstrap.Modal.getInstance(document.getElementById('flightModal'));
         flightModal.hide();
     });
 }
+
 
 // Function to handle adding currency data to the table
 function setupCurrencyModal() {
@@ -196,12 +240,23 @@ function setupCurrencyModal() {
         newRow.insertCell(1).innerText = destinationCountry;
         newRow.insertCell(2).innerText = exchangeRate;
 
+        // Create the delete button
+        const deleteCell = newRow.insertCell(3); // New cell for delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.innerText = 'Delete';
+        deleteButton.classList.add('btn', 'btn-danger'); // Optional: Bootstrap classes for styling
+        deleteButton.addEventListener('click', () => {
+            currencyTable.deleteRow(newRow.rowIndex - 1); // Remove the row from the table
+        });
+        deleteCell.appendChild(deleteButton); // Add button to the cell
+
         // Reset the form after saving the currency details
         document.getElementById('currencyForm').reset();
         const currencyModal = bootstrap.Modal.getInstance(document.getElementById('currencyModal'));
         currencyModal.hide();
     });
 }
+
 
 // Initialize all modal setups
 document.addEventListener('DOMContentLoaded', () => {
