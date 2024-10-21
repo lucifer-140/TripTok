@@ -6,10 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentDay = null;
     const todos = {}; // Object to store to-dos for each day
 
-    // Example data, this should come from user input
-    const startDate = new Date('2023-11-12');
-    const endDate = new Date('2023-11-15');
+    // Retrieve trip details from local storage
+    const tripDetails = JSON.parse(localStorage.getItem('currentTrip'));
+    if (!tripDetails) {
+        alert("No trip details found. Please create a trip first.");
+        return; // Exit if no trip details found
+    }
+
+    // Get start and end dates from trip details
+    const startDate = new Date(tripDetails.startDate);
+    const endDate = new Date(tripDetails.endDate);
     const numberOfDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24)) + 1;
+
+    // example:
+    // const startDate = new Date('2023-11-12');
+    // const endDate = new Date('2023-11-15');
+    // const numberOfDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24)) + 1;
 
     // Create cards for each day dynamically
     for (let i = 0; i < numberOfDays; i++) {
@@ -49,11 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
     saveTodoBtn.addEventListener('click', () => {
         const title = document.getElementById('todoTitle').value;
         const description = document.getElementById('todoDescription').value;
-        const time = document.getElementById('todoTime').value;
+        const startTime = document.getElementById('todoStartTime').value;
+        const endTime = document.getElementById('todoEndTime').value;
         const location = document.getElementById('todoLocation').value;
 
         // Add the new to-do to the appropriate day's list
-        todos[currentDay].push({ title, description, time, location });
+        todos[currentDay].push({ title, description, startTime, endTime, location });
 
         updateTodoList(currentDay);
         addTodoModal.hide();
@@ -67,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         todos[dayIndex].forEach(todo => {
             const listItem = document.createElement('li');
             listItem.className = 'list-group-item';
-            listItem.textContent = `${todo.time} - ${todo.title} at ${todo.location}`;
+            listItem.textContent = `${todo.startTime} - ${todo.endTime}: ${todo.title} at ${todo.location}`;
             todoListElement.appendChild(listItem);
         });
     }

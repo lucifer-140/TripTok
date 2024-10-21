@@ -3,21 +3,21 @@ document.getElementById('addEmergencyContact').addEventListener('click', functio
     emergencyContactModal.show();
 });
 
-document.getElementById('emergencyContactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+// document.getElementById('emergencyContactForm').addEventListener('submit', function(event) {
+//     event.preventDefault();
 
-    const name = document.getElementById('contactName').value;
-    const phone = document.getElementById('contactPhone').value;
-    const relationship = document.getElementById('relationship').value;
+//     const name = document.getElementById('contactName').value;
+//     const phone = document.getElementById('contactPhone').value;
+//     const relationship = document.getElementById('relationship').value;
 
-    const tableBody = document.querySelector('#emergencyContactTable tbody');
-    const newRow = `<tr><td>${name}</td><td>${phone}</td><td>${relationship}</td></tr>`;
-    tableBody.insertAdjacentHTML('beforeend', newRow);
+//     const tableBody = document.querySelector('#emergencyContactTable tbody');
+//     const newRow = `<tr><td>${name}</td><td>${phone}</td><td>${relationship}</td></tr>`;
+//     tableBody.insertAdjacentHTML('beforeend', newRow);
 
-    // Reset the form
-    this.reset();
+//     // Reset the form
+//     this.reset();
 
-    // Hide the modal
-    const emergencyContactModal = bootstrap.Modal.getInstance(document.getElementById('emergencyContactModal'));
-    emergencyContactModal.hide();
-});
+//     // Hide the modal
+//     const emergencyContactModal = bootstrap.Modal.getInstance(document.getElementById('emergencyContactModal'));
+//     emergencyContactModal.hide();
+// });
