@@ -1,9 +1,8 @@
-<!-- transportModal.html -->
 <div class="modal fade" id="transportModal" tabindex="-1" aria-labelledby="transportModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="transportModalLabel">Add Transport</h5>
+                <h5 class="modal-title" id="transportModalLabel">Add Transport Information</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -17,12 +16,12 @@
                         <input type="date" class="form-control" id="transportDate" required>
                     </div>
                     <div class="mb-3">
-                        <label for="transportDocuments" class="form-label">Documents</label>
-                        <input type="file" class="form-control" id="transportDocuments" multiple>
+                        <label for="transportCosts" class="form-label">Transport Costs</label>
+                        <input type="text" class="form-control" id="transportCosts" required>
                     </div>
                     <div class="mb-3">
-                        <label for="transportBudget" class="form-label">Budget</label>
-                        <input type="text" class="form-control" id="transportBudget" required>
+                        <label for="transportDocuments" class="form-label">Documents</label>
+                        <input type="file" class="form-control" id="transportDocuments" multiple>
                     </div>
                 </form>
             </div>

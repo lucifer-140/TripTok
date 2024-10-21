@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp</title>
-	<!-- Bootstrap -->
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="../css/style.css">
+    <title>Sign Up</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="container">
-
-		<!-- Logo -->
         <div class="logo-container text-center">
             <img src="../assets/logo.png" alt="Logo" class="logo img-fluid">
             <p class="app-name">TripTock</p>
@@ -34,21 +32,17 @@
             </div>
         </form>
 
-		
-
         <!-- Button -->
         <button type="submit" class="btn btn-primary d-grid col-6 mx-auto" form="sign-up-form">Sign up</button>
 
-		<!-- Login Link -->
+        <!-- Login Link -->
         <div class="text-center my-3">
-            <a href="signIn.html" class="account-link">Got an account?</a>
+            <button class="btn btn-link account-link" onclick="window.location.href='signIn.html'">Got an account?</button>
         </div>
-
-
-    </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies-->
-	<script src="../css/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="../css/bootstrap.bundle.min.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>

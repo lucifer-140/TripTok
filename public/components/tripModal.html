@@ -24,11 +24,15 @@
                         <label for="tripEndDate" class="form-label">End Date</label>
                         <input type="date" class="form-control" id="tripEndDate" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="totalBudget" class="form-label">Total Budget</label>
+                        <input type="number" class="form-control" id="totalBudget" placeholder="Enter total budget" required>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Next / Create Trip</button>
+                <button type="button" class="btn btn-primary" id="nextTripButton">Next / Create Trip</button>
             </div>
         </div>
     </div>

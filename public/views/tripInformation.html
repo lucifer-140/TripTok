@@ -13,6 +13,7 @@
         <img src="../assets/logo.png" alt="TripTock Logo" class="logo">
         <h2>Additional Travel Information</h2>
 
+        <!-- Flights Section -->
         <div class="section-border">
             <h3>Flights</h3>
             <div id="flightsSection">
@@ -20,10 +21,11 @@
                     <thead>
                         <tr>
                             <th>Flight Number</th>
-                            <th>Seats</th>
+                            <th>Date</th>
                             <th>Departure Time</th>
                             <th>Arrival Time</th>
-                            <th>Budget</th>
+                            <th>Flight Cost</th>
+                            <th>Document (PDF, JPG)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +38,7 @@
             </div>
         </div>
 
+        <!-- Accommodations Section -->
         <div class="section-border">
             <h3>Accommodations</h3>
             <div id="accommodationSection">
@@ -45,7 +48,8 @@
                             <th>Accommodation Name</th>
                             <th>Check-in</th>
                             <th>Check-out</th>
-                            <th>Budget</th>
+                            <th>Accommodation Costs</th>
+                            <th>Document (PDF, JPG)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -58,6 +62,7 @@
             </div>
         </div>
 
+        <!-- Transport Section -->
         <div class="section-border">
             <h3>Transport</h3>
             <div id="transportSection">
@@ -66,7 +71,8 @@
                         <tr>
                             <th>Transport Type</th>
                             <th>Date</th>
-                            <th>Budget</th>
+                            <th>Transport Costs</th>
+                            <th>Document (PDF, JPG)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,27 +85,9 @@
             </div>
         </div>
 
-        <div class="section-border">
-            <h3>Travel Insurance Details</h3>
-            <div id="insuranceSection">
-                <table class="table" id="insuranceTable">
-                    <thead>
-                        <tr>
-                            <th>Insurance Provider</th>
-                            <th>Insurance Type</th>
-                            <th>Policy Number</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Added insurance information will be displayed here -->
-                    </tbody>
-                </table>
-                <button type="button" id="addInsurance" class="btn btn-primary add-button">
-                    <span class="add-icon">+</span>
-                </button>
-            </div>
-        </div>
+    
 
+        <!-- Emergency Contacts Section -->
         <div class="section-border">
             <h3>Emergency Contacts</h3>
             <div id="emergencyContactSection">
@@ -121,26 +109,7 @@
             </div>
         </div>
 
-        <div class="section-border">
-            <h3>Visa Information</h3>
-            <div id="visaSection">
-                <table class="table" id="visaTable">
-                    <thead>
-                        <tr>
-                            <th>Visa Details</th>
-                            <th>Budget</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Added visa information will be displayed here -->
-                    </tbody>
-                </table>
-                <button type="button" id="addVisa" class="btn btn-primary add-button">
-                    <span class="add-icon">+</span>
-                </button>
-            </div>
-        </div>
-
+        <!-- Currency Exchange Section -->
         <div class="section-border">
             <h3>Currency Exchange</h3>
             <div id="currencySection">
@@ -149,6 +118,7 @@
                         <tr>
                             <th>Your Country</th>
                             <th>Destination Country</th>
+                            <th>Exchange Rate</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -161,11 +131,6 @@
             </div>
         </div>
 
-        <!-- Total Budget Section -->
-        <div class="section-border">
-            <h3>Total Budget</h3>
-            <textarea class="form-control" id="totalBudget" rows="2" placeholder="Enter total budget for the trip"></textarea>
-        </div>
 
         <!-- Submit and Cancel Buttons -->
         <div class="mt-3">
@@ -177,9 +142,7 @@
         <div id="flightModalContainer"></div>
         <div id="accommodationModalContainer"></div>
         <div id="transportModalContainer"></div>
-        <div id="visaModalContainer"></div>
         <div id="currencyModalContainer"></div>
-        <div id="insuranceModalContainer"></div>
         <div id="emergencyContactModalContainer"></div>
 
         <!-- Include JavaScript files -->
@@ -187,55 +150,11 @@
         <script src="../js/flights.js"></script>
         <script src="../js/accommodations.js"></script>
         <script src="../js/transport.js"></script>
-        <script src="../js/visa.js"></script>
         <script src="../js/currency.js"></script>
-        <script src="../js/insurance.js"></script>
         <script src="../js/emergencyContacts.js"></script>
+        <script src="../js/navigation.js"></script>
+        <script src="../js/tripInformation.js"></script>
 
-        <!-- Fetch modal components -->
-        <script>
-            fetch('../components/flightModal.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('flightModalContainer').innerHTML = data;
-                });
-
-            fetch('../components/accommodationModal.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('accommodationModalContainer').innerHTML = data;
-                });
-
-            fetch('../components/transportModal.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('transportModalContainer').innerHTML = data;
-                });
-
-            fetch('../components/visaModal.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('visaModalContainer').innerHTML = data;
-                });
-
-            fetch('../components/currencyModal.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('currencyModalContainer').innerHTML = data;
-                });
-
-            fetch('../components/insuranceModal.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('insuranceModalContainer').innerHTML = data;
-                });
-
-            fetch('../components/emergencyContactModal.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('emergencyContactModalContainer').innerHTML = data;
-                });
-        </script>
     </div>
 </body>
 </html>

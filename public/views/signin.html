@@ -3,47 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp</title>
-	<!-- Bootstrap -->
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="../css/style.css">
+    <title>Sign In</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="container">
-		<div class="logo-container text-center">
-			<!-- Logo -->
-			<img src="../assets/logo.png" alt="Logo" class="logo img-fluid">
-		
-			<!-- App Name -->
-			<p class="app-name">TripTock</p>
-		
-			<!-- Title -->
-			<h2 class="page-title">Let’s start planning your trip!</h2>
-		</div>
-		
-        
-        <!-- Form -->
-		<form class="p-4" id="sign-in-form">
-			<div class="mb-3">
-				<input type="email" class="form-control" id="email" placeholder="Email" required>
-			</div>
-			<div class="mb-3">
-				<input type="password" class="form-control" id="password" placeholder="Password" required>
-			</div>
-		</form>
-
-
-		<!-- Button -->
-		<button type="submit" class="btn btn-primary d-grid col-6 mx-auto" form="sign-in-form">Sign In</button>
-
-		<!-- Register Link -->
-        <div class="text-center my-3">
-            <a href="signUp.html" class="account-link">Register Here</a>
+        <div class="logo-container text-center">
+            <!-- Logo -->
+            <img src="../assets/logo.png" alt="Logo" class="logo img-fluid">
+            <p class="app-name">TripTock</p>
+            <h2 class="page-title">Let’s start planning your trip!</h2>
         </div>
 
+        <!-- Form -->
+        <form class="p-4" id="sign-in-form">
+            <div class="mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+        </form>
+
+        <!-- Button -->
+        <button type="submit" class="btn btn-primary d-grid col-6 mx-auto" form="sign-in-form">Sign In</button>
+
+        <!-- Register Link -->
+        <div class="text-center my-3">
+            <button class="btn btn-link account-link" onclick="window.location.href='signUp.html'">Register Here</button>
+        </div>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="../css/bootstrap.bundle.min.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>
